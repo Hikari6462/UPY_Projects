@@ -1,7 +1,7 @@
 # UPY-Proyects
 
-## administrador de inventario porgramado en c
-proyecto final de mi clase de programacion en el que teniamos que hacer un programa para administrar inventario para una tienda 
+## Inventory manager programmed in C
+Final project for my programming class where we had to create a program in C language to manage inventory in a store. 
 
 [Inventory Manager](https://github.com/Hikari6462/practice_projects/blob/main/C/Proyects/Hikari%20Tienda%20de%20arte.c)
 
