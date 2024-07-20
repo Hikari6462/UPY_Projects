@@ -3,7 +3,7 @@
 ## Inventory manager programmed in C
 Final project for my programming class where we had to create a program in C language to manage inventory in a store. 
 
-[Inventory Manager](https://github.com/Hikari6462/practice_projects/blob/main/C/Proyects/Hikari%20Tienda%20de%20arte.c)
+[Inventory Manager](https://github.com/Hikari6462/practice_projects/tree/main/C/Proyects/Inventory%20Manager)
 
 ## MULTIPLE LINEAL REGRESSION - NBA Prediction
 Given a data set with information of some NBA players and their attributes, we will predict how much does it grow the rating of the team .
