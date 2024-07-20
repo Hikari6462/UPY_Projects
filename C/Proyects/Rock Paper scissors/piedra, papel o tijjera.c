@@ -2,76 +2,78 @@
 #include <stdlib.h>
 #include <time.h>
 
-int generarJugadaComputadora() {
-    // Generar un número aleatorio entre 0 y 2
-    int jugada = rand() % 3;
-    return jugada;
+// Generates a random move for the computer
+int generateComputerMove() {
+    return rand() % 3; // Generate a random number between 0 and 2
 }
 
-int determinarGanador(int jugadaUsuario, int jugadaComputadora) {
-    // Si las jugadas son iguales, es un empate
-    if (jugadaUsuario == jugadaComputadora) {
-        return 0; // Empate
+// Determines the winner of the game
+int determineWinner(int userMove, int computerMove) {
+    // If the moves are the same, it's a tie
+    if (userMove == computerMove) {
+        return 0; // Tie
     }
 
-    // Determinar el ganador basado en las reglas del juego
-    // Piedra: 0, Papel: 1, Tijera: 2
-    if ((jugadaUsuario == 0 && jugadaComputadora == 2) ||
-        (jugadaUsuario == 1 && jugadaComputadora == 0) ||
-        (jugadaUsuario == 2 && jugadaComputadora == 1)) {
-        return 1; // El usuario gana
+    // Determine the winner based on the game rules
+    // Rock: 0, Paper: 1, Scissors: 2
+    if ((userMove == 0 && computerMove == 2) ||
+        (userMove == 1 && computerMove == 0) ||
+        (userMove == 2 && computerMove == 1)) {
+        return 1; // User wins
     } else {
-        return -1; // La computadora gana
+        return -1; // Computer wins
     }
 }
 
-void mostrarResultado(int resultado) {
-    if (resultado == 0) {
-        printf("Empate\n");
-    } else if (resultado == 1) {
-        printf("Ganaste!\n");
+// Displays the result of the game
+void displayResult(int result) {
+    if (result == 0) {
+        printf("It's a tie!\n");
+    } else if (result == 1) {
+        printf("You win!\n");
     } else {
-        printf("JA JA JA Perdiste we\n");
+        printf("You lose!\n");
     }
 }
 
 int main() {
-    int jugarDeNuevo = 1;
+    int playAgain = 1;
 
-    srand(time(0)); // Inicializar la semilla para los números aleatorios
+    srand(time(0)); // Initialize the seed for random numbers
 
-    while (jugarDeNuevo) {
-        int jugadaUsuario, jugadaComputadora, resultado;
+    while (playAgain) {
+        int userMove, computerMove, result;
 
-        printf("Elige tu jugada:\n");
-        printf("1 - Piedra\n");
-        printf("2 - Papel\n");
-        printf("3 - Tijera\n");
-        scanf("%d", &jugadaUsuario);
+        // Prompt the user for their move
+        printf("Choose your move:\n");
+        printf("1 - Rock\n");
+        printf("2 - Paper\n");
+        printf("3 - Scissors\n");
+        scanf("%d", &userMove);
 
-        if (jugadaUsuario < 1 || jugadaUsuario > 3) {
-            printf("Jugada inválida. Por favor, elige un número entre 1 y 3.\n");
+        if (userMove < 1 || userMove > 3) {
+            printf("Invalid move. Please choose a number between 1 and 3.\n");
             continue;
         }
 
-        jugadaUsuario--; // Ajustar el valor ingresado para que coincida con los índices del arreglo
+        userMove--; // Adjust the entered value to match array indices
 
-        jugadaComputadora = generarJugadaComputadora();
-        resultado = determinarGanador(jugadaUsuario, jugadaComputadora);
+        computerMove = generateComputerMove(); // Get the computer's move
+        result = determineWinner(userMove, computerMove); // Determine the winner
 
-        printf("La computadora eligió: ");
+        // Display the computer's move
+        char *options[] = {"Rock", "Paper", "Scissors"};
+        printf("The computer chose: %s\n", options[computerMove]);
 
-        char *opciones[] = {"Piedra", "Papel", "Tijera"};
-        printf("%s\n", opciones[jugadaComputadora]);
+        displayResult(result); // Display the result of the game
 
-        mostrarResultado(resultado);
+        // Ask the user if they want to play again
+        printf("Do you want to play again? (Y/N): ");
+        char response[2];
+        scanf("%s", response);
 
-        printf("¿Deseas jugar de nuevo? (S/N): ");
-        char respuesta[2];
-        scanf("%s", respuesta);
-
-        if (respuesta[0] == 'N' || respuesta[0] == 'n') {
-            jugarDeNuevo = 0;
+        if (response[0] == 'N' || response[0] == 'n') {
+            playAgain = 0; // Exit the loop if the user doesn't want to play again
         }
     }
 
