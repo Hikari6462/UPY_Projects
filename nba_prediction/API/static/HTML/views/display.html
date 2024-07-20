@@ -1,0 +1,44 @@
+{% extends "template.html" %}
+
+{% block subtitulo %}
+
+Aqui puedes hacer predicciones.
+
+{% endblock %}
+
+
+{% block imagenes %}
+<div id="gallery">
+    <div class="artwork">
+        <h3>Distribution of variables with a correlation of at least {{ pct_correlation*100 }}%</h3>
+        <br>
+        <img src="{{ downloaded_image_path }}" alt="Distribution of independent variables" >
+    </div>
+</div>
+{% endblock %}
+
+
+{% block botones %}
+
+<div id="predicting">
+    <h4>PREDICTING</h4>
+    <div id="prediction-div">
+        {% if prediction != 'nada' %}
+        <h4>La prediccion es {{ prediction[0] }}</h4>
+        <p>R2: {{ relevant_coefficients[5] }} // Standar Error: {{ relevant_coefficients[6] }} // Sum Error Squares: {{ relevant_coefficients[7] }}</p>
+        {% endif %}
+    </div>
+    <form  method="POST" id="prediction-form" action="/predict">        
+        {% for index in range(independent_varibles|length) %}
+        <label for="x{{ loop.index }}"></label> {{ independent_varibles[index] }}
+        <input type="number" placeholder="{{ independent_varibles[index] }}" name="x{{ loop.index }}" id="x{{ loop.index }}">
+        <br>
+        {% endfor %}
+
+        <button type="submit">Predict</button>
+        
+        <br>
+    </form>
+</div>
+
+{% endblock %}
