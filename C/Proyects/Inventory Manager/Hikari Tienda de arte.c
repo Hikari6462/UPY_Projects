@@ -2,183 +2,183 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_PRODUCTOS 100
+#define MAX_PRODUCTS 100
 
 typedef struct {
-    char nombre[50];
-    float precio;
-    int cantidad;
-} Producto;
+    char name[50];
+    float price;
+    int quantity;
+} Product;
 
-Producto productos[MAX_PRODUCTOS];
-int num_productos = 0;
+Product products[MAX_PRODUCTS];
+int num_products = 0;
 
-void agregar_producto(char *nombre, float precio, int cantidad) {
-    strcpy(productos[num_productos].nombre, nombre);
-    productos[num_productos].precio = precio;
-    productos[num_productos].cantidad = cantidad;
-    num_productos++;
+void add_product(char *name, float price, int quantity) {
+    strcpy(products[num_products].name, name);
+    products[num_products].price = price;
+    products[num_products].quantity = quantity;
+    num_products++;
 }
 
-void mostrar_producto(int indice) {
-    printf("Nombre: %s\n", productos[indice].nombre);
-    printf("Precio: %.2f\n", productos[indice].precio);
-    printf("Cantidad: %d\n", productos[indice].cantidad);
+void show_product(int index) {
+    printf("Name: %s\n", products[index].name);
+    printf("Price: %.2f\n", products[index].price);
+    printf("Quantity: %d\n", products[index].quantity);
 }
 
-void mostrar_productos() {
-    for (int i = 0; i < num_productos; i++) {
+void show_products() {
+    for (int i = 0; i < num_products; i++) {
         printf("%d. ", i + 1);
-        mostrar_producto(i);
+        show_product(i);
         printf("\n");
     }
 }
 
-int buscar_producto(char *nombre) {
-    for (int i = 0; i < num_productos; i++) {
-        if (strcmp(productos[i].nombre, nombre) == 0) {
+int find_product(char *name) {
+    for (int i = 0; i < num_products; i++) {
+        if (strcmp(products[i].name, name) == 0) {
             return i;
         }
     }
     return -1;
 }
 
-void vender_producto(int indice, int cantidad) {
-    if (indice < 0 || indice >= num_productos) {
-        printf("Producto no encontrado\n");
+void sell_product(int index, int quantity) {
+    if (index < 0 || index >= num_products) {
+        printf("Product not found\n");
         return;
     }
-    if (productos[indice].cantidad < cantidad) {
-        printf("No hay suficiente stock\n");
+    if (products[index].quantity < quantity) {
+        printf("Insufficient stock\n");
         return;
     }
     
-    float total = productos[indice].precio * cantidad;
-    printf("Total a pagar: %.2f\n", total);
+    float total = products[index].price * quantity;
+    printf("Total to pay: %.2f\n", total);
     
-    productos[indice].cantidad -= cantidad;
+    products[index].quantity -= quantity;
 }
 
-void agregar_stock(int indice, int cantidad) {
-    if (indice < 0 || indice >= num_productos) {
-        printf("Producto no encontrado\n");
+void add_stock(int index, int quantity) {
+    if (index < 0 || index >= num_products) {
+        printf("Product not found\n");
         return;
     }
-    productos[indice].cantidad += cantidad;
+    products[index].quantity += quantity;
 }
 
-void eliminar_producto(char *nombre) {
-    int indice = buscar_producto(nombre);
-    if (indice == -1) {
-        printf("Producto no encontrado\n");
+void delete_product(char *name) {
+    int index = find_product(name);
+    if (index == -1) {
+        printf("Product not found\n");
         return;
     }
-    for (int i = indice; i < num_productos - 1; i++) {
-        productos[i] = productos[i + 1];
+    for (int i = index; i < num_products - 1; i++) {
+        products[i] = products[i + 1];
     }
-    num_productos--;
-    printf("Producto eliminado: %s\n", nombre);
+    num_products--;
+    printf("Product deleted: %s\n", name);
 }
 
-void eliminar_stock(int indice, int cantidad) {
-    if (indice < 0 || indice >= num_productos) {
-        printf("Producto no encontrado\n");
+void delete_stock(int index, int quantity) {
+    if (index < 0 || index >= num_products) {
+        printf("Product not found\n");
         return;
     }
     
-    if (productos[indice].cantidad < cantidad) {
-        printf("No hay suficiente stock para eliminar\n");
+    if (products[index].quantity < quantity) {
+        printf("Not enough stock to delete\n");
         return;
     }
     
-    productos[indice].cantidad -= cantidad;
-    printf("Se eliminaron %d unidades de stock de %s\n", cantidad, productos[indice].nombre);
+    products[index].quantity -= quantity;
+    printf("%d units of %s stock deleted\n", quantity, products[index].name);
 }
 
 void menu() {
-    printf("1. Agregar producto\n");
-    printf("2. Mostrar productos\n");
-    printf("3. Vender producto\n");
-    printf("4. Agregar stock\n");
-    printf("5. Eliminar producto\n");
-    printf("6. Eliminar stock\n");
-    printf("7. Salir\n");
+    printf("1. Add product\n");
+    printf("2. Show products\n");
+    printf("3. Sell product\n");
+    printf("4. Add stock\n");
+    printf("5. Delete product\n");
+    printf("6. Delete stock\n");
+    printf("7. Exit\n");
 }
 
 int main() {
-    // Precargar 5 productos
-    agregar_producto("Pintura al oleo", 50.0, 10);
-    agregar_producto("Lapices de colores", 10.0, 20);
-    agregar_producto("Bloc de dibujo", 5.0, 30);
-    agregar_producto("Pinceles", 15.0, 40);
-    agregar_producto("Acuarelas", 20.0, 50);
+    // Preload 5 products
+    add_product("Oil paint", 50.0, 10);
+    add_product("Colored pencils", 10.0, 20);
+    add_product("Drawing pad", 5.0, 30);
+    add_product("Paint brushes", 15.0, 40);
+    add_product("Watercolors", 20.0, 50);
 
     while (1) {
         menu();
-        int opcion;
-        printf("Elige una opcion: ");
-        scanf("%d", &opcion);
+        int option;
+        printf("Choose an option: ");
+        scanf("%d", &option);
 
-        if (opcion == 1) {
-            char nombre[50];
-            float precio;
-            int cantidad;
+        if (option == 1) {
+            char name[50];
+            float price;
+            int quantity;
 
-            printf("Nombre del producto: ");
-            scanf("%s", nombre);
-            printf("Precio del producto: ");
-            scanf("%f", &precio);
-            printf("Cantidad en stock: ");
-            scanf("%d", &cantidad);
+            printf("Product name: ");
+            scanf("%s", name);
+            printf("Product price: ");
+            scanf("%f", &price);
+            printf("Quantity in stock: ");
+            scanf("%d", &quantity);
 
-            agregar_producto(nombre, precio, cantidad);
+            add_product(name, price, quantity);
 
-        } else if (opcion == 2) {
-            mostrar_productos();
+        } else if (option == 2) {
+            show_products();
 
-        } else if (opcion == 3) {
-            int indice;
-            int cantidad;
+        } else if (option == 3) {
+            int index;
+            int quantity;
 
-            printf("Numero del producto: ");
-            scanf("%d", &indice);
-            printf("Cantidad a vender: ");
-            scanf("%d", &cantidad);
+            printf("Product number: ");
+            scanf("%d", &index);
+            printf("Quantity to sell: ");
+            scanf("%d", &quantity);
 
-            vender_producto(indice - 1, cantidad);
+            sell_product(index - 1, quantity);
 
-        } else if (opcion == 4) {
-            int indice;
-            int cantidad;
+        } else if (option == 4) {
+            int index;
+            int quantity;
 
-            printf("Numero del producto: ");
-            scanf("%d", &indice);
-            printf("Cantidad a agregar: ");
-            scanf("%d", &cantidad);
+            printf("Product number: ");
+            scanf("%d", &index);
+            printf("Quantity to add: ");
+            scanf("%d", &quantity);
 
-            agregar_stock(indice - 1, cantidad);
+            add_stock(index - 1, quantity);
 
-        } else if (opcion == 5) {
-            char nombre[50];
+        } else if (option == 5) {
+            char name[50];
 
-            printf("Nombre del producto a eliminar: ");
-            scanf("%s", nombre);
+            printf("Name of product to delete: ");
+            scanf("%s", name);
 
-            eliminar_producto(nombre);
+            delete_product(name);
 
-        } else if (opcion == 6) {
-            int numeroProducto;
-            int cantidadEliminar;
+        } else if (option == 6) {
+            int productNumber;
+            int quantityDelete;
 
-            printf("Numero del producto para eliminar stock: ");
-            scanf("%d", &numeroProducto);
+            printf("Product number to delete stock from: ");
+            scanf("%d", &productNumber);
 
-            printf("Cantidad a eliminar del stock: ");
-            scanf("%d", &cantidadEliminar);
+            printf("Quantity to delete from stock: ");
+            scanf("%d", &quantityDelete);
 
-            eliminar_stock(numeroProducto - 1, cantidadEliminar);
+            delete_stock(productNumber - 1, quantityDelete);
 
-        } else if (opcion == 7) {
+        } else if (option == 7) {
             break;
         }
     }
