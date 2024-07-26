@@ -1,4 +1,4 @@
-# online ptoyects 
+# Online ptoyects 
 ## Analyzing a bank's credit risk
 
 # UPY-Proyects
