@@ -15,5 +15,8 @@ The importance of reducing credit risk has led a German financial institution to
 *  Build models using various machine learning algorithms.
 *  Evaluate the models using metrics such as precision, recall, area under the ROC curve, and F1-score.
 
-References
-Alura Latam
+## References
+Álvaro Camacho, Christian Velasco y Alejandro Gamarra (22 de julio de 2024). Alura Latam. 
+Obtenido de https://www.aluracursos.com/inmersion-datos/clase01-preprocesamiento-y-exploracion-de-datos
+
+
