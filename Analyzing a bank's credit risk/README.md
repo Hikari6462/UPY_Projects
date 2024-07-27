@@ -1,19 +1,19 @@
-## Descripción 
-La importancia de reducir el riesgo crediticio ha llevado a una institución financiera alemana a buscar soluciones innovadoras. como científicos de datos, hemos sido convocados para construir un modelo de machine learning confiable que sea capaz de evaluar con mayor precisión la probabilidad de incumplimiento crediticio de sus clientes.
+## Description
+The importance of reducing credit risk has led a German financial institution to seek innovative solutions. As data scientists, we have been called upon to build a reliable machine learning model capable of more accurately assessing the credit default probability of their clients.
 
-## Objetivo del proyecto:
-*	Uso de Python y análisis de datos
-*	Desafío: Analizar el riesgo crediticio de una institución bancaria alemana
-*	Identificar los perfiles de los clientes propensos a incumplir
-*	Desarrollo de habilidades analíticas y toma de decisiones
+## Project Objective:
+* Use of Python and data analysis
+* Challenge: Analyze the credit risk of a German banking institution
+* Identify profiles of clients prone to default
+* Develop analytical skills and decision-making abilities
 
-## Desafíos dentro del proyecto.
-•	Importar el conjunto de datos.
-•	Conocer el tamaño y el tipo de datos que hay para cada variable.
-•	Realizar un preprocesamiento a los datos para facilitar su análisis.
-•	Generar histogramas para entender cómo están distribuidos los datos.
-•	Construcción de Modelos con algunos algoritmos de machine learning
-•	Evaluar los modelos utilizando métricas como precisión, recall, área bajo la curva ROC, y F1-score.
+## Challenges within the project:
+* Import the dataset.
+*  Understand the size and data type for each variable.
+*  Preprocess the data to facilitate analysis.
+*  Generate histograms to understand data distributions.
+*  Build models using various machine learning algorithms.
+*  Evaluate the models using metrics such as precision, recall, area under the ROC curve, and F1-score.
 
-## Bibliografía 
-Alura Latam 
+References
+Alura Latam
