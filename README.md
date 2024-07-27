@@ -16,7 +16,7 @@ Given a data set with information of some NBA players and their attributes, we w
 
 [NBA Prediction](https://github.com/Hikari6462/practice_projects/tree/main/nba_prediction)
 
-## my first web side
+## My first webside
 final proyect for my computer class
 <!--
 ## pagina web 
