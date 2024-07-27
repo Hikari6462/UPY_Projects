@@ -1,4 +1,4 @@
-# Online ptoyects 
+# Online Proyects 
 ## Analyzing a bank's credit risk
 reducing credit risk has led a German financial institution to seek innovative solutions.
 
