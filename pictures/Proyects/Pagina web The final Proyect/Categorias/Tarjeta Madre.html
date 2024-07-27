@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesadores</title>
+    <!-- Agrega aquí tus enlaces a hojas de estilo, fuentes, etc. -->
+    <style>
+        /* Estilo básico para el header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Estilo para el logo de la empresa */
+        .logo {
+            width: 50px; /* Ajusta el tamaño según tus necesidades */
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* Estilo para el menú de navegación */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Estilo para la sección del contenido */
+        .contenido {
+            padding: 20px;
+        }
+
+        /* Estilo para la galería de imágenes */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .galeria img {
+            max-width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .galeria a {
+            display: block;
+            text-align: center;
+            margin-top: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Estilo para el footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            overflow: hidden; /* Float clearfix */
+        }
+
+        /* Estilo para las columnas del footer */
+        .footer-column {
+            float: left;
+            width: 25%;
+        }
+
+        /* Estilo para los enlaces en las columnas */
+        .footer-column a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para la rejilla de redes sociales */
+        .social-icons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: #333;
+            font-size: 20px;
+        }
+
+        /* Clearfix para asegurar que el footer se expanda con el contenido */
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <style>
+        /* Estilo para la imagen */
+        img {
+            width: 200px; /* Ancho de la imagen en píxeles */
+            height: 150px; /* Alto de la imagen en píxeles */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo de la empresa -->
+        <img class="logo" src= "https://static.wixstatic.com/media/e16f80_6d5a7633da3f4bd5b062fc0e2e62d370~mv2.png/v1/fill/w_77,h_77,al_c,usm_0.66_1.00_0.01/e16f80_6d5a7633da3f4bd5b062fc0e2e62d370~mv2.png" alt="Logo de la empresa" alt="Logo de la empresa">
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/digim/OneDrive/Escritorio/Pagina%20Web/V&R%20de%20pc.html">Inicio</a></li>
+                <li><a href="file:///C:/Users/digim/OneDrive/Escritorio/Pagina%20Web/contacto.html">Equipo de trabajo Calico enterprises</a></li>
+                <li><a href="file:///C:/Users/digim/OneDrive/Escritorio/Pagina%20Web/arma%20tu%20pc.html#">Arma  tu propia Pc</a></li>
+                <li><a href="file:///C:/Users/digim/OneDrive/Escritorio/Pagina%20Web/Atencion%20al%20cliente.html">Atencion al cliente </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+ <!-- Contenido principal -->
+ <h1>Tarjeta Madre</h1>
+ <div class="contenido">
+     <div class="producto">
+         <img src="https://th.bing.com/th/id/R.243c2c9f8374230088ae84e2761fedce?rik=dbahcq3L8bM6Bw&pid=ImgRaw&r=0" alt="Producto 1">
+         <div class="producto-info"> 
+             <div class="producto-nombre"> Gigabyte Micro ATX B550M DS3H AC Rev. 1.0, S-AM4, AMD B550, HDMI, 128GB DDR4 para AMD | B550M DS3H AC (REV. 1.0   </div>
+             <div class="producto-precio">$166.00</div>
+         </div>
+         <button onclick="agregarProducto('Tarjeta madre', 116)">Agregar</button>
+     </div>
+
+    <!-- Agregar más productos aquí -->
+
+    <!-- Productos seleccionados -->
+    <div class="productos-seleccionados">
+        <h2>Productos seleccionados</h2>
+        <ul id="productos-seleccionados-lista">
+            <!-- La lista de productos seleccionados se mostrará aquí -->
+        </ul>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </div>
+
+    <!-- Monto total de las piezas seleccionadas -->
+    <div class="total" id="total"></div>
+</div>
+
+<!-- Cuarta columna (espacio vacío) -->
+<div class="footer-column"></div>
+
+<div class="total" id="total"></div>
+</div>
+<div class="contenido">
+<a href="file:///C:/Users/digim/OneDrive/Escritorio/Pagina%20Web/pago.html">Pagar</a>
+
+
+    <!-- Pie de página -->
+    <footer class="clearfix">
+        <!-- Primera columna -->
+        <div class="footer-column">
+            <h3>Nombre de la Empresa</h3>
+            <p>Vendemos computadoras y piezas de PC para ingeniería. Ofrecemos productos de alta calidad y rendimiento para satisfacer tus necesidades tecnológicas. ¡Potencia tu creatividad con nuestros equipos especializados!</p>
+        </div>
+
+        <!-- Segunda columna -->
+        <div class="footer-column">
+            <h3>Contacto</h3>
+            <ul>
+                <li>Teléfono: +52 999 802 5307</li>
+                <li>Correo: 2209030@upy.edu.mx</li>
+                <li>Dirección: Calle Principal, Ciudad caucel</li>
+            </ul>
+        </div>
+
+        <!-- Tercera columna -->
+        <div class="footer-column">
+            <h3>Redes Sociales</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/people/Hikari-Scsd/pfbid0M964Er4BCJf8L7sMfFQa2GQdgKVJinepT6xhLPBEWK66GAGQdbe5FUfybZpREvPDl/" class="social-icon">Fb</a>
+                <a href="https://www.instagram.com/hikari6462/" class="social-icon">In</a>
+                <a href="https://twitter.com/Hikari6462_2" class="social-icon">Tw</a>
+                <a href="https://www.youtube.com/@Hikari6462." class="social-icon">Yt</a>
+            </div>
+        </div>
+
+        <!-- Cuarta columna (espacio vacío) -->
+        <div class="footer-column"></div>
+    </footer>
+
+<!-- Pie de página -->
+<footer class="clearfix">
+    <!-- Agrega aquí las columnas del footer como se muestra en la versión anterior -->
+</footer>
+
+<!-- Script para manejar las selecciones de productos y el monto total -->
+<script>
+    // Array para almacenar los productos seleccionados
+    let productosSeleccionados = [];
+
+    // Función para agregar un producto al carrito
+    function agregarProducto(categoria, precio) {
+   {
+          
+        }  {
+            // Si no existe, agregarlo al carrito
+            productosSeleccionados.push({ categoria, precio });
+        }
+        actualizarCarrito();
+    }
+    // Función para eliminar un producto del carrito
+    function eliminarProducto(categoria, precio) {
+        // Encontrar el producto en el carrito y eliminarlo
+        productosSeleccionados = productosSeleccionados.filter((producto) => producto.categoria !== categoria || producto.precio !== precio);
+        actualizarCarrito();
+    }
+
+    // Función para vaciar el carrito
+    function vaciarCarrito() {
+        productosSeleccionados = [];
+        actualizarCarrito();
+    }
+
+    // Función para actualizar la lista de productos seleccionados y el total
+    function actualizarCarrito() {
+        const listaProductosSeleccionados = document.getElementById('productos-seleccionados-lista');
+        const totalElement = document.getElementById('total');
+        let total = 0;
+
+        // Limpiar la lista de productos seleccionados
+        listaProductosSeleccionados.innerHTML = '';
+
+        // Recorrer los productos seleccionados y agregarlos a la lista
+        productosSeleccionados.forEach((producto) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span>${producto.categoria}</span>
+                <span>$${producto.precio.toFixed(2)}</span>
+                <button onclick="eliminarProducto('${producto.categoria}', ${producto.precio})">Eliminar</button>
+            `;
+            listaProductosSeleccionados.appendChild(li);
+            total += producto.precio;
+        });
+
+        // Mostrar el monto total de los productos seleccionados
+        totalElement.textContent = `Total: $${total.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>

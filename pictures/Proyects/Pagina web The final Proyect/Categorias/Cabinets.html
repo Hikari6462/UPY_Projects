@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armar PC</title>
+    <link rel="stylesheet" href="css/Universal.css">
+    <title>Procesadores</title>
+    <!-- Agrega aquí tus enlaces a hojas de estilo, fuentes, etc. -->
+
+<body>
+    <header>
+        <!-- Logo de la empresa -->
+        <img class="logo" src= "https://static.wixstatic.com/media/e16f80_6d5a7633da3f4bd5b062fc0e2e62d370~mv2.png/v1/fill/w_77,h_77,al_c,usm_0.66_1.00_0.01/e16f80_6d5a7633da3f4bd5b062fc0e2e62d370~mv2.png" alt="Logo de la empresa" alt="Logo de la empresa">
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="contacto.html">Equipo de trabajo Calico enterprises</a></li>
+                <li><a href="built pc.html">Arma  tu propia Pc</a></li>
+                <li><a href="Atencion%20al%20cliente.html">Atencion al cliente </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+ <!-- Contenido principal -->
+<div class="contenido">
+   
+    <!-- Productos disponibles para seleccionar -->
+    <h1>Cabinet</h1>
+</div>
+<div class="producto">
+    <img src="https://th.bing.com/th/id/OIP.HtF4jUNcjHgembxpzZZPJgHaHa?pid=ImgDet&rs=1" alt="Producto 1">
+    <div class="producto-info"> Gabinete NZXT H5 Flow con
+        Ventana, Midi-Tower,
+        Mini-ITX/Micro-ATX/ATX/EATX,
+        USB 3.2, sin Fuente, Negro |
+        CC-H51FB-01
+        <div class="producto-nombre">XD</div>
+        <div class="producto-precio">$122.00</div>
+    </div>
+    <button onclick="agregarProducto('cabinet', 122)">Agregar</button>
+</div>
+<img src="https://th.bing.com/th/id/OIP.iQatTP4ua4GTpzKpP65WTAHaFo?pid=ImgDet&rs=1" alt="Producto 1">
+    <div class="producto-info"> Gabinete ASUS TUF Gaming
+        GT502 con Ventana, Midi-Tower,
+        ATX/Micro-ATX/Mini-ITX, USB
+        3.2, sin Fuente/Ventiladores
+        Instalados, Negro |
+        90DC0090-B08000
+        <div class="producto-nombre">XD</div>
+        <div class="producto-precio">$122.00</div>
+    </div>
+    <button onclick="agregarProducto('cabinet', 122)">Agregar</button>
+</div>
+
+    <!-- Agregar más productos aquí -->
+
+    <!-- Productos seleccionados -->
+    <div class="productos-seleccionados">
+        <h2>Productos seleccionados</h2>
+        <ul id="productos-seleccionados-lista">
+            <!-- La lista de productos seleccionados se mostrará aquí -->
+        </ul>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </div>
+
+    <!-- Monto total de las piezas seleccionadas -->
+    <div class="total" id="total"></div>
+</div>
+<!-- Cuarta columna (espacio vacío) -->
+<div class="footer-column"></div>
+
+<div class="total" id="total"></div>
+</div>
+<div class="contenido">
+<a href="pago.html">Pagar</a>
+    <!-- Pie de página -->
+   <!-- Footer -->
+   <footer class="clearfix">
+    <footer class="clearfix">
+        <!-- Primera columna -->
+        <div class="footer-column">
+            <h3>Calico enterprises</h3>
+            <p>We sell computers and PC parts for engineering. We offer high quality and performance products to meet your technological needs. Boost your creativity with our specialized teams!</p>
+        </div>
+
+       <!-- Segunda columna -->
+       <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+            <li>Phone: +52 999 802 5307</li>
+            <li>Mail: 2209030@upy.edu.mx</li>
+            <li>Address: C. 45#227, x 78b y 77a 97314, Ciudad caucel</li>
+        </ul>
+    </div>
+
+    <!-- Tercera columna -->
+    <div class="footer-column">
+        <h3>Redes Sociales</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/people/Hikari-Scsd/pfbid0M964Er4BCJf8L7sMfFQa2GQdgKVJinepT6xhLPBEWK66GAGQdbe5FUfybZpREvPDl/" class="https://th.bing.com/th/id/R.6f367787f85b53a47a1cf18808c616cf?rik=1t4ZF99WsT39LQ&pid=ImgRaw&r=0">Fb</a>
+            <a href="https://www.instagram.com/hikari6462_v2/" class="https://th.bing.com/th/id/R.bf8d37ef558e5255057311e4e514d8e3?rik=aIrQXFnB6brdCA&pid=ImgRaw&r=0">In</a>
+            <a href="https://twitter.com/Hikari6462_2" class="https://th.bing.com/th/id/OIP.o06snWh5G4LQ1fJbNlarpAHaGB?pid=ImgDet&rs=1">Tw</a>
+            <a href="https://www.youtube.com/@Hikari6462." class="https://logos.edu.mx/wp-content/uploads/2021/01/YouTube-LOGO.png">Yt</a>
+            
+        </div>
+    </div>
+</footer>  
+<div class="copy">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="small">
+                    &copy; 2024 Todos los derechos reservados por <a href="https://www.instagram.com/hikari6462_v2/">Hikari6462</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+<!-- Script para manejar las selecciones de productos y el monto total -->
+<script>
+    // Array para almacenar los productos seleccionados
+    let productosSeleccionados = [];
+
+    // Función para agregar un producto al carrito
+    function agregarProducto(categoria, precio) {
+   {
+          
+        }  {
+            // Si no existe, agregarlo al carrito
+            productosSeleccionados.push({ categoria, precio });
+        }
+        actualizarCarrito();
+    }
+    // Función para eliminar un producto del carrito
+    function eliminarProducto(categoria, precio) {
+        // Encontrar el producto en el carrito y eliminarlo
+        productosSeleccionados = productosSeleccionados.filter((producto) => producto.categoria !== categoria || producto.precio !== precio);
+        actualizarCarrito();
+    }
+
+    // Función para vaciar el carrito
+    function vaciarCarrito() {
+        productosSeleccionados = [];
+        actualizarCarrito();
+    }
+
+    // Función para actualizar la lista de productos seleccionados y el total
+    function actualizarCarrito() {
+        const listaProductosSeleccionados = document.getElementById('productos-seleccionados-lista');
+        const totalElement = document.getElementById('total');
+        let total = 0;
+
+        // Limpiar la lista de productos seleccionados
+        listaProductosSeleccionados.innerHTML = '';
+
+        // Recorrer los productos seleccionados y agregarlos a la lista
+        productosSeleccionados.forEach((producto) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span>${producto.categoria}</span>
+                <span>$${producto.precio.toFixed(2)}</span>
+                <button onclick="eliminarProducto('${producto.categoria}', ${producto.precio})">Eliminar</button>
+            `;
+            listaProductosSeleccionados.appendChild(li);
+            total += producto.precio;
+        });
+
+        // Mostrar el monto total de los productos seleccionados
+        totalElement.textContent = `Total: $${total.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>
