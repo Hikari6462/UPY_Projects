@@ -15,6 +15,9 @@ Final project for my programming class where we had to create a program in C lan
 Given a data set with information of some NBA players and their attributes, we will predict how much does it grow the rating of the team .
 
 [NBA Prediction](https://github.com/Hikari6462/practice_projects/tree/main/nba_prediction)
+
+## my first web side
+final proyect for my computer class
 <!--
 ## pagina web 
 me hicieron crear una pagina web desde cero y en una semana xdd
