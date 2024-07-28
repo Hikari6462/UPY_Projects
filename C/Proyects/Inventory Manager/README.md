@@ -6,16 +6,16 @@ This code provides a basic inventory management system for a store, allowing you
 
 ## Descripción de las funciones
 * add_product:
-Añade un nuevo producto al inventario con el nombre, precio y cantidad especificados.
+Adds a new product to inventory with the specified name, price and quantity.
 
 * show_product:
-Muestra la información de un producto específico por índice.
+Displays information about a specific product by index.
 
 * show_products:
-Muestra todos los productos en el inventario.
+Displays all products in inventory.
 
 * find_product:
-Busca un producto por nombre y devuelve su índice, o -1 si no se encuentra.
+Searches for a product by name and returns its index, or -1 if not found.
 
 * sell_product:
 Vende una cantidad específica de un producto por índice. Calcula el total a pagar y actualiza la cantidad en stock.
@@ -33,7 +33,7 @@ Elimina una cantidad específica de stock de un producto por índice.
 Muestra el menú de opciones al usuario.
 
 * main:
-Función principal que maneja la interacción con el usuario y llama a las funciones correspondientes según la opción seleccionada.
+Main function that handles user interaction and calls the corresponding functions depending on the selected option.
 
 <!-- # MULTIPLE LINEAL REGRESSION - NBA Prediction
 
