@@ -23,7 +23,7 @@ final proyect for my computer class
 ## Alice'sCatLibrary 
 Learning object-oriented programming I made my first library as a final project
 
-[Library](https://github.com/Hikari6462/UPY_Projects/blob/main/pictures/Proyects/Alice's%20Cat%20Library.py)
+[Library](https://github.com/Hikari6462/UPY_Projects/tree/main/pictures/Proyects/Alices's%20Cat%20Library)
 <!--
 ## pagina web 
 me hicieron crear una pagina web desde cero y en una semana xdd
