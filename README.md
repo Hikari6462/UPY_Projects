@@ -1,10 +1,5 @@
 # UPY-Proyects
 
-## Analyzing a bank's credit risk
-reducing credit risk has led a German financial institution to seek innovative solutions.
-
-[Analyzing a bank's credit risk](https://github.com/Hikari6462/Personal_projects/tree/main/Analyzing%20a%20bank's%20credit%20risk)
-
 ## Inventory manager programmed in C
 Final project for my programming class where we had to create a program in C language to manage inventory in a store. 
 
