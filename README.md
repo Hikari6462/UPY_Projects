@@ -8,7 +8,7 @@ Final project for my programming class where we had to create a program in C lan
 ## MULTIPLE LINEAL REGRESSION - NBA Prediction
 Given a data set with information of some NBA players and their attributes, we will predict how much does it grow the rating of the team .
 
-[NBA Prediction](https://github.com/Hikari6462/practice_projects/tree/main/nba_prediction)
+[NBA Prediction](https://github.com/Hikari6462/NBA_prediction)
 
 ## My first webside
 final proyect for my computer class
