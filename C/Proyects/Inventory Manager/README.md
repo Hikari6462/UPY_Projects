@@ -4,7 +4,7 @@
 Final project for my programming class where we had to create a program in C language to manage inventory in a store.
 This code provides a basic inventory management system for a store, allowing you to add, display, sell, and delete products and stock, interacting with the user through a console menu.
 
-## Descripción de las funciones
+## Description of functions
 * add_product:
 Adds a new product to inventory with the specified name, price and quantity.
 
